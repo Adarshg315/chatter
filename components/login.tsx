@@ -7,7 +7,7 @@ export default function Login() {
 
     const handleLogin = async () => {
         const { error } = await supabase.auth.signInWithOAuth({
-            provider: "github",
+            provider: "google",
         });
 
         if (error) {
