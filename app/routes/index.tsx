@@ -2,6 +2,7 @@ import type { LoaderArgs, ActionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Form, useLoaderData } from "@remix-run/react";
 import Login from "components/login";
+import RealtimeMessages from "components/realtime-messages";
 import createServerSupabase from "utils/supabase.server";
 
 export const action = async ({ request }: ActionArgs) => {
@@ -36,7 +37,7 @@ export default function Index() {
   return (
     <>
       <Login />
-      <pre>{JSON.stringify(messages, null, 2)}</pre>
+      <RealtimeMessages serverMessages={messages} />
       <Form method="post">
         <input type="text" name="message" />
         <button type="submit">Send</button>
