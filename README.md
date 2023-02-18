@@ -39,8 +39,4 @@ To genrate types use
 supabase gen types typescript --project-id 'project id here' > db_types.ts
 ```
 
-```sh
-supabase gen types typescript --project-id xgortzqbdzjrndowcowt > db_types.ts
-```
-
 projet id from SUPABSE_URL
